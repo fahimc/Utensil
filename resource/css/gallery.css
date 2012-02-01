@@ -1,0 +1,8 @@
+body{margin: 0px; padding: 0px;font-family: 'Open Sans', sans-serif; background-color: #333333;}
+#title{position:absolute;  left: 400px; text-align: center; font-size: 24px; font-weight: bold; color: #FFFFFF;}
+#imageHolder{position:absolute; width:600px; height:300px; overflow: hidden; left:250px;top:50px; }
+#thumbnails{position: absolute;left: 200px; top:500px; overflow: hidden;width:600px; height:200px; border:0px solid; }
+#leftButton{background-image: url(../image/gallery/leftButton.png); width:32px; height: 27px; overflow: hidden; cursor:pointer; position: absolute; top:550px; left:150px;}
+#leftButton:hover{background-position: bottom;}
+#rightButton{background-image: url(../image/gallery/rightButton.png); width:32px; height: 27px; overflow: hidden; cursor:pointer;position: absolute; top:550px; left:820px;}
+#rightButton:hover{background-position: bottom;}

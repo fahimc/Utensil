@@ -1,0 +1,8 @@
+html,body{margin:0px;padding:0px;}
+body{background-color: #999;}
+#dropdown{background: url(../image/dropdown/dropdown-bg.gif) no-repeat #FFF; width:194px; height: 24px;margin-top: 50px; margin-left: 50px;}
+#dropdownText{border:0px;float:left; width:166px;margin-left: 4px;margin-top: 2px;height:24px; font-weight: bold;}
+#icon{border:0px;width:23px; height:24px;background: url(../image/dropdown//icon.gif) no-repeat; cursor: pointer;}
+#dropdown-selection{background-color: #FFF; width:200px; height:100px; min-height: 35px; max-height:100px; overflow: auto;}
+.dropdown-options{cursor: pointer;width:auto; height:auto; }
+.dropdown-options:hover{background-color: #7faaff;}
