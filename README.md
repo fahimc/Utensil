@@ -45,13 +45,11 @@ Toolkit Extra
 Usage Examples
 ==============
 *Enter Frame method*
-{{{
+ EnterFrame.addEvent(onEnterFrame);
+ EnterFrame.start();
 
-EnterFrame.addEvent(onEnterFrame);
-EnterFrame.start();
-
-function onEnterFrame(event)
-{
+ function onEnterFrame(event)
+ {
   alert('this is on enterframe');
-}
-}}}
+ }
+
