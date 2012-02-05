@@ -23,15 +23,13 @@ I'm also adding custom standalone components.
 Usage Examples
 ==============
 *Tween method*
-`
-tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);
-`
+
+`tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);`
 
 *Get X & Y Position*
-`
-var x = getX(document.getElementById('box'));
-var y = getY(document.getElementById('box'));
-`
+
+`var x = getX(document.getElementById('box'));`
+`var y = getY(document.getElementById('box'));`
 
 Toolkit Extra
 =============
@@ -44,13 +42,14 @@ Toolkit Extra
 
 Usage Examples
 ==============
-`
-*Enter Frame method*
- EnterFrame.addEvent(onEnterFrame);
- EnterFrame.start();
 
- function onEnterFrame(event)
- {
-  alert('this is on enterframe');
- }
-`
+*Enter Frame method*
+
+ `EnterFrame.addEvent(onEnterFrame);`
+ `EnterFrame.start();`
+
+ `function onEnterFrame(event)`
+ `{`
+  `alert('this is on enterframe');`
+ `}`
+
