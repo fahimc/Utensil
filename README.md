@@ -28,8 +28,8 @@ Usage Examples
 
 *Get X & Y Position*
 
-`var x = getX(document.getElementById('box'));`
-`var y = getY(document.getElementById('box'));`
+`var x = getX(document.getElementById('box'));
+ var y = getY(document.getElementById('box'));`
 
 Toolkit Extra
 =============
