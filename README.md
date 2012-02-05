@@ -1,8 +1,8 @@
-Javascript lightweight toolkit
-==============================
+# Javascript lightweight toolkit
+
 Javascript lightweight toolkit for app/game development
-About Framework & Components
-============================
+## About Framework & Components
+
 This is a Javascript toolkit which contains helper methods to easily get elements X & Y positions, window width & height and much more. The Toolkit is broken into two parts, one is a lightweight essentials version and the other has much more methods.
 
 I'm also adding custom standalone components.
@@ -20,8 +20,7 @@ I'm also adding custom standalone components.
  * Browser detector.
 
 
-Usage Examples
-==============
+### Usage Examples
 *Tween method*
 
 `tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);`
@@ -31,8 +30,7 @@ Usage Examples
     var x = getX(document.getElementById('box'));
     var y = getY(document.getElementById('box'));
 
-Toolkit Extra
-=============
+## Toolkit Extra
 
 *Below is a list of some of the methods:*
  * Enter frame function
@@ -40,8 +38,7 @@ Toolkit Extra
  * Add Drag function to an element
  * Get load parameters.
 
-Usage Examples
-==============
+### Usage Examples
 
 *Enter Frame method*
 
