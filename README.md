@@ -2,6 +2,8 @@
 
 # Javascript lightweight toolkit
 
+### [Code Documentation](https://github.com/fahimc/Utensil/wiki/*Code-Documentation*)
+
 Javascript lightweight toolkit for app/game development
 ## About Framework & Components
 
