@@ -41,6 +41,7 @@ I'm also adding custom standalone components.
  * Cross-browser addEventListener
  * Add Drag function to an element
  * Get load parameters.
+ * Cross-browser Console log
 
 ### Usage Examples
 
@@ -54,3 +55,6 @@ I'm also adding custom standalone components.
      alert('this is on enterframe');
     }
 
+*Cross-browser Console Log*
+
+    log('hello world');
