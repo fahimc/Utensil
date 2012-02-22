@@ -20,10 +20,14 @@
 	{
 		execCommandOnElement(document.getElementById('copy'), "insertImage","http://levelselect.co.uk/wp-content/uploads/2008/03/nokonoko02.jpg");
 		var imgs =document.getElementById('copy').getElementsByTagName("img");
-		startDrag(imgs[imgs.length-1],0,0,200,200);
+		imgs[imgs.length-1].style.clear="both";
+		imgs[imgs.length-1].addEventListener("click", imageClick);
 		
 	}
-
+	function imageClick(event)
+	{
+		this.style.float="left";
+	}
 	function execCommandOnElement(el, commandName, value) {
 		if( typeof value == "undefined") {
 			value = null;
