@@ -12,12 +12,12 @@
 	}
 
 	function loadComplete() {
-		document.body.addEventListener("mousedown", onDocDown);
+		document.getElementById('wrapper').addEventListener("mousedown", onDocDown);
 		document.addEventListener("mouseup", mouseUp);
 	}
 	function onDocDown(event)
 	{
-		if(event.target==document.body)
+		if(event.target==document.getElementById('wrapper'))
 		{
 			createDiv(event);
 		}else{
@@ -49,7 +49,7 @@
 		div.style.border = "1 px dotted";
 		div.style.left = left + "px";
 		div.style.top = top + "px";
-		document.body.appendChild(div);
+		document.getElementById('wrapper').appendChild(div);
 		document.addEventListener("mousemove", sizeDiv);
 	}
 	function onClick()
