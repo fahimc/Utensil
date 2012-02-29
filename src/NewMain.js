@@ -5,7 +5,9 @@
 	}
 	function onLoad(event)
 	{
-		console.log("here",Utensil.stageWidth());
+		Utensil.startDrag(document.getElementById('box'));
+		Utensil.newEvent("test");
+		console.log(Utensil.Event.test);
 	}
 Main();
 }(window));
