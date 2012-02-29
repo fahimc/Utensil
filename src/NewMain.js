@@ -7,7 +7,13 @@
 	{
 		Utensil.startDrag(document.getElementById('box'));
 		Utensil.newEvent("test");
-		console.log(Utensil.Event.test);
+		console.log(Utensil.events.test);
+		Utensil.addListener(document,Utensil.events.test,onEvent);
+		Utensil.dispatchEvent(Utensil.events.test,document);
+	}
+	function onEvent(event)
+	{
+		console.log("dispatch recieved");
 	}
 Main();
 }(window));
