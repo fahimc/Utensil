@@ -1,19 +1,21 @@
 ( function(window) {
-	function Main()
-	{
-		window.addEventListener("load",onLoad);
+	var obj = {
+		att : "hello",
+		get : function() {
+			return this.att;
+		}
 	}
-	function onLoad(event)
-	{
-		Utensil.startDrag(document.getElementById('box'));
-		Utensil.newEvent("test");
-		console.log(Utensil.events.test);
-		Utensil.addListener(document,Utensil.events.test,onEvent);
-		Utensil.dispatchEvent(Utensil.events.test,document);
+	var new_obj={
+	};
+	function Main() {
+		window.addEventListener("load", onLoad);
 	}
-	function onEvent(event)
-	{
-		console.log("dispatch recieved");
+
+	function onLoad(event) {
+		Utensil.startDrag(document.getElementById('box'), 100, 20, 400, 400);
+		Utensil.extend(new_obj,obj);
 	}
-Main();
+
+	
+	Main();
 }(window));
