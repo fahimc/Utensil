@@ -22,6 +22,7 @@
 		Utensil.log(new_obj);
 		Utensil.EnterFrame.frameRate=300;
 		Utensil.EnterFrame.addEvent(onEnterFrame);
+		Utensil.tweenLite(document.getElementById('box1'),3,{left:"400px",top:"800px"});
 		// Utensil.EnterFrame.start();
 	}
 	function onEnterFrame()
