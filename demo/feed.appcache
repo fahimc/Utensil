@@ -3,7 +3,7 @@ CACHE MANIFEST
 # This is a comment
 
 CACHE:
-feed.html
+index.html
 ../lib/core/UtensilLight.js
 ../lib/core/UtensilMax.js
 ../lib/core/EventDispatcher.js

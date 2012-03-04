@@ -22,13 +22,13 @@
 		Utensil.log(new_obj);
 		Utensil.EnterFrame.frameRate=300;
 		Utensil.EnterFrame.addEvent(onEnterFrame);
-		Utensil.tweenLite(document.getElementById('box1'),3,{left:"400px",top:"800px"});
+		setTimeout(onEnterFrame,1);
 		// Utensil.EnterFrame.start();
 	}
 	function onEnterFrame()
 	{
 
-		console.log(Utensil.hitTestObject(document.getElementById('box'),document.getElementById('box1')));
+		Utensil.tweenLite(document.getElementById('box'),3,{rotate:10,left:"100px",top:"200px",opacity:0.5,scale:0.8},"ease-out");
 	}
 	Main();
 }(window));
