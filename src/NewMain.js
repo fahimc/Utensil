@@ -16,19 +16,13 @@
 	}
 
 	function onLoad(event) {
-		Utensil.startDrag(document.getElementById('box'), 100, 20, 400, 400);
-		Utensil.extend(new_obj, obj);
-		Utensil.extend(new_obj, Element);
-		Utensil.log(new_obj);
-		Utensil.EnterFrame.frameRate=300;
-		Utensil.EnterFrame.addEvent(onEnterFrame);
-		setTimeout(onEnterFrame,1);
-		// Utensil.EnterFrame.start();
+		Utensil.tween(document.getElementById('box'),1,{left:"200px",top:"200px",opacity:0.5,scale:0.5},"ease-out");
+		Utensil.ImageLoader("http://2.bp.blogspot.com/-vkGvilF2Va4/ThIin4ayhSI/AAAAAAAAGjw/SrAAwq-LjnY/s1600/M11%2BOS%2BSct.jpg",onComplete);
 	}
-	function onEnterFrame()
+	
+	function onComplete(t,x)
 	{
-
-		Utensil.tweenLite(document.getElementById('box'),3,{rotate:10,left:"100px",top:"200px",opacity:0.5,scale:0.8},"ease-out");
+		Utensil.log("done");
 	}
 	Main();
 }(window));
