@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script type="text/javascript" src="../lib/core/UtensilLight_New.js"></script>
-		<script type="text/javascript" src="../lib/core/UtensilMax_new.js"></script>
+		<script type="text/javascript" src="../lib/core/UtensilLight.js"></script>
+		<script type="text/javascript" src="../lib/core/UtensilMax.js"></script>
 		<script type="text/javascript" src="../lib/core/UtensilCore.js"></script>
 		<script type="text/javascript" src="../src/NewMain.js"></script>
 		<link type="text/css" rel="stylesheet" href="../resource/css/log.css" />
@@ -11,69 +11,5 @@
 	</head>
 	<body>
 		<div id="box" style="width:100px;height: 100px;background-color: #F00;position: absolute;"></div>
-		<div id="box1" style="width:100px;height: 100px;background-color: #F00;position: absolute;top:100px;left:150px;"></div>
-		<script type="text/javascript">
-		
-			function getTransformProperty() {
-				var properties = ['transition', 'WebkitTransition', 'msTransition', 'MozTransition', 'OTransition'];
-				var p;
-				while( p = properties.shift()) {
-
-					if( typeof document.body.style[p] != 'undefined') {
-						switch(p) {
-							case 'transition':
-								p = "";
-								break;
-							case 'WebkitTransition':
-								p = "-webkit-";
-								break;
-							case 'MozTransition':
-								p = "-moz-";
-								break;
-							case 'OTransition':
-								p = "-o-";
-								break;
-						}
-						return p;
-					}
-				}
-				return false;
-			}
-
-			var transitions = {
-				property : "",
-				rotate : function(value) {
-					//set the animated property
-					var transform="";
-					var value="";
-					// set the value
-					if(getTransformProperty() != "") {
-						value= " rotate(" + value + "deg)";
-						this.property = "transform";
-						transform= box.style[webkit + "transform"];
-						transform ? transform += transitions.rotate(100) : transform = transitions.rotate(7.5);
-					} else {
-						value=  "progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104, sizingMethod='auto expand')";
-						this.property = "filter";
-					}
-					 
-				}
-			}
-			function tween() {
-				var box = document.getElementById('box1');
-				var webkit = getTransformProperty();
-
-				//box.style[webkit + "transform"] = transform;
-				//box.style[webkit + "transition"] = "all 0.3s ease-out";
-				var style = document.createElement('style');
-				style.type = 'text/css';
-				style.innerHTML = ".utensil-animate{" + webkit + "transform:" + transform + ";" + webkit + "transition:" + "all 0.3s ease-out";
-				document.getElementsByTagName('head')[0].appendChild(style);
-				box.className += " utensil-animate";
-			}
-
-			// tween();
-
-		</script>
 	</body>
 </html>
