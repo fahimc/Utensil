@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<meta name="author" content="Fahim" />
+		<script type="text/javascript" src="../lib/com/data/database/Database.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			Database.create();
+			Database.addTable("newTable");
+			Database.addProperty("newTable","id");
+			Database.addProperty("newTable","name");
+			Database.addProperty("newTable","email");
+			Database.addData("newTable",{id:"123456"});
+			Database.addData("newTable",{id:"2222",email:"asas@asas.com"});
+			Database.updateDataByValue("newTable",{email:"fahim@gmx.com"},{id:"123456"});
+			Database.updateDataByValue("newTable",{email:""},{email:"asas@asas.com"});
+			document.body.innerHTML+= Database.toString();
+		</script>
+	</body>
+</html>
