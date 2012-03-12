@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript" src="../lib/com/utils/Drag.js"></script>
+	</head>
+	<body style="width: 90%;height: 100%;"> 
+		<div id="title">
+			Cross-Browser Drag
+		</div>
+		
+			<div id="scroller" style="position: relative;background-color: #000;height: 500px;width:20px;float: right;">
+				<div id="box" style="width:20px;height: 100px;background-color: #f00;position: absolute;"></div>
+			</div>
+		
+		<script type="text/javascript">
+			Drag.startDrag(document.getElementById("box"),{x:0,y:0,width:20,height:500});
+
+		</script>
+	</body>
+</html>
