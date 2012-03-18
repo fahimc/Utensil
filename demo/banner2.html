@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>banner2</title>
+		<meta name="author" content="Fahim" />
+		<!-- Date: 2012-03-17 -->
+		<style type="text/css">
+		body{font-family: Arial, Helvetica, sans-serif;color: #fff;}
+		div{text-align: center;}
+			.box-frame1{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 0px;
+				left:0px;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+			}
+			.box2-frame1{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 0px;
+				left:100px;
+				background-color: #00f;
+				-webkit-transform: rotate(0deg);
+			}
+			.box-frame2{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 0px;
+				left:100px;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box-frame3{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 200px;
+				left:200px;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box-frame4{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 200px;
+				left:300px;
+				background-color: #f00;
+				-webkit-transform: rotate(50deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box2-frame4{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 300px;
+				left:100px;
+				background-color: #00f;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box-frame5{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:300px;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box2-frame5{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:100px;
+				background-color: #00f;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box-frame5{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:200px;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box2-frame6{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:200px;
+				z-index:1;
+				background-color: #00f;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box-frame7{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:100px;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box2-frame8{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:100px;
+				z-index:1;
+				background-color: #00f;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+			.box-frame8{
+				width:100px;
+				height:100px;
+				position: absolute;
+				top: 400px;
+				left:200px;
+				z-index:2;
+				background-color: #f00;
+				-webkit-transform: rotate(0deg);
+				-webkit-transition: all 0.5s linear 0s;
+			}
+		</style>
+		<script type="text/javascript">
+			var duration=8;
+			var currentFrame=1;
+			var timer=null;
+			
+			window.onload=init;
+			function init()
+			{
+				setObjectStyles();
+				timer = setInterval(enterFrame,500);				
+			}
+			function enterFrame()
+			{
+				currentFrame++;
+				if(currentFrame>duration)
+				{
+					clearInterval(timer);
+					timer=null;
+				}else{
+					
+					setObjectStyles();
+				}
+				console.log(currentFrame);
+				
+			}
+			function setObjectStyles()
+			{
+				var children = document.body.getElementsByTagName('*');
+				for(var a=0;a<children.length;a++)
+					{
+						children[a].className+=" "+children[a].id+"-frame"+currentFrame;
+					}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">Hello World</div>
+		<div id="box2">Easy and Light</div>
+	</body>
+</html>
