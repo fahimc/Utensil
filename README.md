@@ -2,6 +2,8 @@
 
 # Javascript lightweight toolkit
 
+---PLEASE NOTE UTENSIL HAS HAD AN UPGRADE, DOCUMENTATION AND EXAMPLES REFER TO THE OLD VERSION. NEW VERSION REQUIRES YOU TO PUT Utensil.* BEFORE EVERY METHOD---
+
 ### [Code Documentation](https://github.com/fahimc/Utensil/wiki/*Code-Documentation*)
 
 Javascript lightweight toolkit for app/game development
