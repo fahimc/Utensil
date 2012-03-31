@@ -29,12 +29,12 @@ I'm also adding custom standalone components.
 ### Usage Examples
 *Tween method*
 
-    tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);
+    Utensil.tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);
 
 *Get X & Y Position*
 
-    var x = getX(document.getElementById('box'));
-    var y = getY(document.getElementById('box'));
+    var x = Utensil.getX(document.getElementById('box'));
+    var y = Utensil.getY(document.getElementById('box'));
 
 ## Toolkit Extra
 
