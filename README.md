@@ -1,8 +1,6 @@
 ![utensil](http://i1270.photobucket.com/albums/jj605/fahimchowdhury85/1.gif)
 
-# Javascript lightweight toolkit
-
----PLEASE NOTE UTENSIL HAS HAD AN UPGRADE, DOCUMENTATION AND EXAMPLES REFER TO THE OLD VERSION. NEW VERSION REQUIRES YOU TO PUT Utensil.* BEFORE EVERY METHOD---
+# Javascript Lightweight Toolkit
 
 ### [Code Documentation](https://github.com/fahimc/Utensil/wiki/*Code-Documentation*)
 
@@ -52,6 +50,16 @@ You need to provide the element, the event name (without "on" for IE) and the tr
 
     Utensil.removeListener(document.body,"click",onBodyClicked);
 
+## Load External Data
+You can load external data using the URLLoader.load method. provide a URL and the callback function. rememeber to add two parameters to the callback function. The first is the raw text data and the second is xml data. The second parameter is not important unless you want to load xml.
+
+    var url = "resource/json/settings.json"
+    Utensil.URLLoader.load(url, loadHandler);
+    
+    function loadHandler(t,x)
+    {
+        
+    }
 
 ### Usage Examples
 *Tween method*
@@ -63,27 +71,3 @@ You need to provide the element, the event name (without "on" for IE) and the tr
     var x = Utensil.getX(document.getElementById('box'));
     var y = Utensil.getY(document.getElementById('box'));
 
-## Toolkit Extra
-
-*Below is a list of some of the methods:*
- * Enter frame function
- * Cross-browser addEventListener
- * Add Drag function to an element
- * Get load parameters.
- * Cross-browser Console log
-
-### Usage Examples
-
-*Enter Frame method*
-
-    EnterFrame.addEvent(onEnterFrame);
-    EnterFrame.start();
-    
-    function onEnterFrame(event)
-    {
-     alert('this is on enterframe');
-    }
-
-*Cross-browser Console Log*
-
-    log('hello world');
