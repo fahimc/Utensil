@@ -88,13 +88,16 @@ You can POST or GET parameters to a URL using the following method.
     var params = "value1&value2&value3";
     Utensil.postURL(url,params,"POST");
 
+##Get X & Y Position of an Element
+You can get the X(style.left) and Y(style.top) of element. It will return the value from the style but if you want the X and  Y relative to the window then set the second parameter to true.  
+    
+    var x = Utensil.getX(document.getElementById('box'),false);
+    var y = Utensil.getY(document.getElementById('box'),true);
+
 ### Usage Examples
 *Tween method*
 
     Utensil.tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);
 
-*Get X & Y Position*
 
-    var x = Utensil.getX(document.getElementById('box'));
-    var y = Utensil.getY(document.getElementById('box'));
 
