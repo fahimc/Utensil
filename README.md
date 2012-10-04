@@ -61,6 +61,33 @@ You can load external data using the URLLoader.load method. Provide a URL and th
         console.log(t,x);
     }
 
+## Check If the Browser is IE
+Call the following method if you want to know if the current browser is IE.  
+
+    console.log(Utensil.Browser.isIE);
+
+## Check If the Browser is Mobile
+Call the following method if you want to know if the current browser is a mobile browser.  
+
+    console.log(Utensil.Browser.isMobile);
+
+## Check If the Browser is IE9
+Call the following method if you want to know if the current browser is IE9. this method is a function so don't forget the parentheses. 
+
+    console.log(Utensil.Browser.isIE9());
+
+## Check IE Browser Version
+Call the following method if you want to know IE version number. 
+
+    console.log(Utensil.Browser.getInternetExplorerVersion());
+
+## POST/GET to a URL  
+You can POST or GET parameters to a URL using the following method. 
+
+    var url ="path/to/php";
+    var params = "value1&value2&value3";
+    Utensil.postURL(url,params,"POST");
+
 ### Usage Examples
 *Tween method*
 
