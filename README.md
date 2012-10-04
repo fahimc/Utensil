@@ -51,14 +51,14 @@ You need to provide the element, the event name (without "on" for IE) and the tr
     Utensil.removeListener(document.body,"click",onBodyClicked);
 
 ## Load External Data
-You can load external data using the URLLoader.load method. provide a URL and the callback function. rememeber to add two parameters to the callback function. The first is the raw text data and the second is xml data. The second parameter is not important unless you want to load xml.
+You can load external data using the URLLoader.load method. Provide a URL and the callback function. rememeber to add two parameters to the callback function. The first is the raw text data and the second is xml data. The second parameter is not important unless you are loading an xml file.
 
     var url = "resource/json/settings.json"
     Utensil.URLLoader.load(url, loadHandler);
     
     function loadHandler(t,x)
     {
-        
+        console.log(t,x);
     }
 
 ### Usage Examples
