@@ -17,13 +17,40 @@ I'm also adding custom standalone components.
 
  * Mouse X and Y
  * Window width and Height
- * Trace: add multiple arguments within one alert.
- * reset the style of an element.
- * Basic Tween
  * Image Loader
  * URL Loader
  * postURL: this funciton allows you to sent variable either through a POST or GET method.
  * Browser detector.
+
+## Get Window Width and Height  
+
+    var width = Utensil.stageWidth();
+    var height = Utensil.stageHeight();
+
+## Get Mouse X and Y  
+To get the X and Y coordinates you need to pass in an event to the following methods. For example you will create a mousemove event and then within that function you will be able to get the X and Y coordinates for any DOM element.  
+
+
+    //create an event listener
+    Utensil.addListener(document.body,"mousemove",onMouseMove);
+    
+    //mouse move function
+    onMouseMove function(event)
+    {
+      var bodyX = Utensil.mouseX(document.body,event);
+      var bodyY = Utensil.mouseY(document.body,event);
+      
+    }
+
+## Add Cross Browser Event Listener  
+You need to provide the element, the event name (without "on" for IE) and the trigger function.
+
+    Utensil.addListener(document.body,"click",onBodyClicked);
+
+## Remove Cross Browser Event Listener  
+You need to provide the element, the event name (without "on" for IE) and the trigger function.
+
+    Utensil.removeListener(document.body,"click",onBodyClicked);
 
 
 ### Usage Examples
