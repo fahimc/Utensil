@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Utensil by fahimc</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Utensil</h1>
+        <h2>Javascript lightweight toolkit for app/game development</h2>
+        <a href="https://github.com/fahimc/Utensil" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><img src="http://i1270.photobucket.com/albums/jj605/fahimchowdhury85/1.gif" alt="utensil"></p>
+
+<h1>Javascript Lightweight Toolkit</h1>
+
+<h3><a href="https://github.com/fahimc/Utensil/wiki/*Code-Documentation*">Code Documentation</a></h3>
+
+<p>Javascript lightweight toolkit for app/game development</p>
+
+<h2>About Framework &amp; Components</h2>
+
+<p>This is a Javascript toolkit which contains helper methods to easily get elements X &amp; Y positions, window width &amp; height and much more. The Toolkit is broken into two parts, one is a lightweight essentials version and the other has much more methods.</p>
+
+<p>I'm also adding custom standalone components.</p>
+
+<p><em>Below is a list of some of the core methods:</em></p>
+
+<ul>
+<li>Mouse X and Y</li>
+<li>Window width and Height</li>
+<li>Image Loader</li>
+<li>URL Loader</li>
+<li>postURL: this funciton allows you to sent variable either through a POST or GET method.</li>
+<li>Browser detector.</li>
+</ul><h2>Get Window Width and Height</h2>
+
+<pre><code>var width = Utensil.stageWidth();
+var height = Utensil.stageHeight();
+</code></pre>
+
+<h2>Get Mouse X and Y</h2>
+
+<p>To get the X and Y coordinates you need to pass in an event to the following methods. For example you will create a mousemove event and then within that function you will be able to get the X and Y coordinates for any DOM element.  </p>
+
+<pre><code>//create an event listener
+Utensil.addListener(document.body,"mousemove",onMouseMove);
+
+//mouse move function
+onMouseMove function(event)
+{
+  var bodyX = Utensil.mouseX(document.body,event);
+  var bodyY = Utensil.mouseY(document.body,event);
+
+}
+</code></pre>
+
+<h2>Add Cross Browser Event Listener</h2>
+
+<p>You need to provide the element, the event name (without "on" for IE) and the trigger function.</p>
+
+<pre><code>Utensil.addListener(document.body,"click",onBodyClicked);
+</code></pre>
+
+<h2>Remove Cross Browser Event Listener</h2>
+
+<p>You need to provide the element, the event name (without "on" for IE) and the trigger function.</p>
+
+<pre><code>Utensil.removeListener(document.body,"click",onBodyClicked);
+</code></pre>
+
+<h2>Load External Data</h2>
+
+<p>You can load external data using the URLLoader.load method. Provide a URL and the callback function. rememeber to add two parameters to the callback function. The first is the raw text data and the second is xml data. The second parameter is not important unless you are loading an xml file.</p>
+
+<pre><code>var url = "resource/json/settings.json"
+Utensil.URLLoader.load(url, loadHandler);
+
+function loadHandler(t,x)
+{
+    console.log(t,x);
+}
+</code></pre>
+
+<h2>Check If the Browser is IE</h2>
+
+<p>Call the following method if you want to know if the current browser is IE.  </p>
+
+<pre><code>console.log(Utensil.Browser.isIE);
+</code></pre>
+
+<h2>Check If the Browser is Mobile</h2>
+
+<p>Call the following method if you want to know if the current browser is a mobile browser.  </p>
+
+<pre><code>console.log(Utensil.Browser.isMobile);
+</code></pre>
+
+<h2>Check If the Browser is IE9</h2>
+
+<p>Call the following method if you want to know if the current browser is IE9. this method is a function so don't forget the parentheses. </p>
+
+<pre><code>console.log(Utensil.Browser.isIE9());
+</code></pre>
+
+<h2>Check IE Browser Version</h2>
+
+<p>Call the following method if you want to know IE version number. </p>
+
+<pre><code>console.log(Utensil.Browser.getInternetExplorerVersion());
+</code></pre>
+
+<h2>POST/GET to a URL</h2>
+
+<p>You can POST or GET parameters to a URL using the following method. </p>
+
+<pre><code>var url ="path/to/php";
+var params = "value1&amp;value2&amp;value3";
+Utensil.postURL(url,params,"POST");
+</code></pre>
+
+<h2>Get X &amp; Y Position of an Element</h2>
+
+<p>You can get the X(style.left) and Y(style.top) of element. It will return the value from the style but if you want the X and  Y relative to the window then set the second parameter to true.  </p>
+
+<pre><code>var x = Utensil.getX(document.getElementById('box'),false);
+var y = Utensil.getY(document.getElementById('box'),true);
+</code></pre>
+
+<h2>Tween method</h2>
+
+<pre><code>Utensil.tween(thumbHolder, 0.5, "left", xx, "ease-out", 0);
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/fahimc/Utensil/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/fahimc/Utensil/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/fahimc/Utensil"></a> is maintained by <a href="https://github.com/fahimc">fahimc</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
