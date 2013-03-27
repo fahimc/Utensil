@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>stage_test</title>
+		<meta name="author" content="Fahim" />
+		<!-- Date: 2013-03-27 -->
+		<script type="text/javascript" src="../lib/core/UtensilLight.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			function onLoad()
+			{
+				console.log(Utensil.stageWidth(),Utensil.stageHeight());
+				Utensil.stage(document.getElementById("stage"));
+				console.log(Utensil.stageWidth(),Utensil.stageHeight());
+			}
+		</script>
+	</head>
+	<body onload="onLoad()">
+		<div id="stage" style="width:100px;height:100px;" ></div>
+	</body>
+</html>
+
